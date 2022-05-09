@@ -1,8 +1,9 @@
 const express = require('express')
 const Router = express.Router()
 
-Router.get('/', (req, res) => {
-    res.render('home')
-})
+//RouteFunctions import
+const homeFunction = require('./route_functions/home')
+
+Router.get('/', homeFunction)
 
 module.exports = Router
